@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WayFlow - The ultimate mobile road puzzle game. Slide broken road tiles, fix the track, and drive to victory! Challenge your brain across 1,500+ handcrafted levels.">
+    <meta name="keywords" content="WayFlow, road puzzle game, slide puzzle, brain training, tile sliding puzzle, car puzzle game, daily challenge puzzle, iOS puzzle game">
+    <meta name="author" content="WayFlow">
+    <title>WayFlow | Connect the Roads, Clear the Way!</title>
 
+    <link rel="icon" type="image/png" href="assets/appIcon.png">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="WayFlow | Connect the Roads, Clear the Way!">
+    <meta property="og:description" content="Slide broken road tiles, fix the track, and drive to victory! Challenge your brain across 1,500+ handcrafted levels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wayflowgame.com">
+    <meta property="og:image" content="assets/appIcon.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WayFlow | Connect the Roads, Clear the Way!">
+    <meta name="twitter:description" content="Slide broken road tiles, fix the track, and drive to victory! Challenge your brain across 1,500+ handcrafted levels.">
+    <meta name="twitter:image" content="assets/appIcon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/appIcon.png" alt="WayFlow Logo" class="logo-icon-img">
+                WayFlow
+            </a>
+            
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Drawer -->
+        <div class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <!-- Animated Snake Road Section (Spans Full Screen, Behind Content) -->
+            <div class="animated-road-container">
+                <svg viewBox="0 0 1600 600" class="snake-road-svg" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <!-- Perfect S-shape snake path from bottom-left to top-right -->
+                        <path id="road-path" d="M -50 650 C 300 650, 500 300, 800 300 C 1100 300, 1300 -50, 1650 -50" />
+                    </defs>
+                    
+                    <!-- Road Layers -->
+                    <use href="#road-path" fill="none" stroke="#9ca3af" stroke-width="120" stroke-linecap="round" />
+                    <use href="#road-path" fill="none" stroke="#334155" stroke-width="100" stroke-linecap="round" />
+                    <use href="#road-path" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-dasharray="30 40" stroke-linecap="round" />
+                    
+                    <!-- Cars with SMIL animations -->
+                    <g>
+                        <animateMotion dur="14s" begin="0s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#road-path"/>
+                        </animateMotion>
+                        <image href="assets/taxi.png" width="70" height="70" x="-35" y="-35" transform="rotate(90)" />
+                    </g>
+                    
+                    <g>
+                        <animateMotion dur="16s" begin="3.5s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#road-path"/>
+                        </animateMotion>
+                        <image href="assets/police.png" width="70" height="70" x="-35" y="-35" transform="rotate(90)" />
+                    </g>
+                    
+                    <g>
+                        <animateMotion dur="13s" begin="7s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#road-path"/>
+                        </animateMotion>
+                        <image href="assets/cargo.png" width="70" height="70" x="-35" y="-35" transform="rotate(90)" />
+                    </g>
+                    
+                    <g>
+                        <animateMotion dur="15s" begin="9.5s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#road-path"/>
+                        </animateMotion>
+                        <image href="assets/ambulance.png" width="70" height="70" x="-35" y="-35" transform="rotate(90)" />
+                    </g>
+                    
+                    <g>
+                        <animateMotion dur="17s" begin="13s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#road-path"/>
+                        </animateMotion>
+                        <image href="assets/fire.png" width="70" height="70" x="-35" y="-35" transform="rotate(90)" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Connect the Roads, Clear the Way!</h1>
+                    <p class="hero-subtitle">Slide broken road tiles, fix the track, and drive to victory! Challenge your brain across 1,500+ handcrafted levels, unlock 9 unique themes, and climb the global leaderboards.</p>
+                    <div class="hero-ctas">
+                        <!-- Only App Store Button -->
+                        <a href="#" class="store-btn app-store">
+                            <span class="store-icon"></span>
+                            <div class="store-text">
+                                <span class="store-small">Download on the</span>
+                                <span class="store-large">App Store</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features section" id="features">
+            <div class="container">
+                <h2 class="section-title">Why Play WayFlow?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧩</div>
+                        <h3 class="feature-title">1,500+ Challenging Levels</h3>
+                        <p class="feature-desc">Progressive difficulty designed to test your spatial reasoning, logic, and problem-solving skills. Can you master them all?</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3 class="feature-title">9 Unique Themes & Progression</h3>
+                        <p class="feature-desc">Level up to unlock vibrant visual environments, including City Streets, Snow Peaks, Night Drive, Off-Road, and more.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3 class="feature-title">Global Leaderboards</h3>
+                        <p class="feature-desc">Compete with puzzle enthusiasts worldwide and claim your spot on the global high score ranks.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Daily Rush & Speed Challenges</h3>
+                        <p class="feature-desc">Fresh daily puzzles with dedicated speed leaderboards—solve the fastest to win unique rewards!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section class="screenshots section bg-alt" id="screenshots">
+            <div class="container">
+                <h2 class="section-title">Gameplay Showcase</h2>
+                <div class="screenshots-grid">
+                    <div class="screenshot-card">
+                        <img src="assets/train-your-brain.png" alt="Train Your Brain" loading="lazy">
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="assets/build-the-road.png" alt="Build The Road" loading="lazy">
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="assets/find-the-path.png" alt="Find The Path" loading="lazy">
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="assets/slide-and-connect.png" alt="Slide And Connect" loading="lazy">
+                    </div>
+                    <div class="screenshot-card">
+                        <img src="assets/climb-the-global-ranks.png" alt="Climb The Global Ranks" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/appIcon.png" alt="WayFlow Logo" class="logo-icon-img" style="width: 30px; border-radius: 6px;">
+                    WayFlow
+                </a>
+                <p class="copyright">© 2026 WayFlow. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
